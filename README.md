@@ -3,7 +3,7 @@ The Robust Profile Clustering (RPC) model is a population-based clustering techn
 
 ## Getting Started
 The code and supporting materials are run using MATLAB software. To run the example data, you will need:
-* RPCexample.m - run RPC and create ouput data
+* RPC_example.m - run RPC and create ouput data
 * drchrnd.m - Dirichlet random generator function
 * heatmap.m - function file to generate desired heatmap figures
 * ExampleData.mat - input data source 
@@ -18,7 +18,7 @@ The example dataset is a MAT-file that contains the following variables:
 * Subpop3_true: 50x3 matrix. This matrix contains the 3 modal cluster patterns modally expected from subpopulation 3. Each column represents a different global pattern with no deviation in any of the 50 variables. 
 
 ## Example Output
-Execution of the RPCexample.m file with Example dataset should generate the following results:
+Execution of the RPC_example.m file with Example dataset should generate the following results:
 * Posterior median estimates of all RPC model parameters (π,λ,θ_0,θ_1,ν,β) saved as RPCparm_ex.mat
 * Text file outputs of π,ν,β (pis.txt, nus.txt, betas.txt).
 * Text file output of predicted modal pattern of global clusters (GlobalPattern_predicted.txt)
