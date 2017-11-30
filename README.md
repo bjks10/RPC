@@ -26,7 +26,7 @@ Execution of the RPC_example.m file with Example dataset should generate the fol
 * Trace plot figure of β (betas.png)
 * Dendrogram plot from Posterior pairwise label switching step (dendrogram.png)
 * Heat map comparison side-by-side plots of predicted deviations by subpopulation and actual deviations by subpopulation. (G_deviations.png)
-These results are stored in /Expected_Output for reference. 
+These results are stored in /Output for reference. 
 
 ## Authors
 **Briana Stephenson**, Amy Herring, Andrew Olshan
