@@ -5,7 +5,7 @@ The Robust Profile Clustering (RPC) model is a population-based clustering techn
 The code and supporting materials are run using MATLAB software. To run the example data, you will need:
 * SourceCode/RPC_example.m - run RPC and create output data 
 * SourceCode/drchrnd.m - Dirichlet random generator function
-* SourceCode/heatmap.m - function file to generate desired heatmap figures
+* SourceCode/heatmap.m - function file to generate desired heatmap figures (this file is only needed if running MATLAB 2016a or earlier)
 * ExampleData.mat - input data source 
 
 ## Example Data
