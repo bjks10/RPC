@@ -1,0 +1,11 @@
+The following supporting files are provided assuming successful data pull request from HCHS/SOL:
+	1) hchs_FPE_importdata.sas - SAS file to prepare FPE data for analysis
+		Import: HCHS FPE dietary data (sas7bdat file)
+		Export: HCHS FPE revised dietary data (sas7bdat file)
+			HCHS FPE revised excel file (xlsx file)
+	2) hchsFPE_MACROVARS.sas - SAS file formatting variables
+	3) HCHS_RPC.m - MATLAB execution file to run RPC method
+		Import: HCHS FPE revised excel file (xlsx file)
+		Export: MATLAB data file containing model parameter estimates
+			Membership probability and indices of global and local profiles
+	4) HCHS_postRPC.sas - SAS file applying and summarizing results incorporating survey sample weights
