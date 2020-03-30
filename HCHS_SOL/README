@@ -1,5 +1,5 @@
 The following supporting files are provided assuming successful data pull request from HCHS/SOL:
-	1) hchs_FPE_importdata.sas - SAS file to prepare FPE data for analysis
+	1) hchs_FPE_import.sas - SAS file to prepare FPE data for analysis
 		Import: HCHS FPE dietary data (sas7bdat file)
 		Export: HCHS FPE revised dietary data (sas7bdat file)
 			HCHS FPE revised excel file (xlsx file)
