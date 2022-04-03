@@ -15,11 +15,11 @@ You will need all the food pattern equivalents for foods in the WWEIA, NHANES 20
 Run MakeFoodGroups_nhanes.sas  - run for each survey cycle separately. Make sure the order of variables match with the cycle run. Example runs 2011-12 (G), 2013-14 (H), 2015-16 (I), 2017-18 (J)can be directly found in [nhanes-data](https://github.com/bjks10/NHANES_wtofm/tree/main/nhanes-data "nhanes-data title") subfolder.
 Note: The ordering of food group variables changed in 2017-2018 (J) cycle
 	
-	*Input files:	FPED_DR1TOT_XXYY.sas7bdat
+	* Input files:	FPED_DR1TOT_XXYY.sas7bdat
 			FPED_DR2TOT_XXYY.sas7bdat
 			FPED_DR1IFF_XXYY.sas7bdat
 			FPED_DR2IFF_XXYY.sas7bdat
-	*Output files:	FPED_DRAVGXXYY.sas7bdat
+	* Output files:	FPED_DRAVGXXYY.sas7bdat
 
 
 
@@ -29,10 +29,10 @@ XXYY denote a single survey cycle (e.g. 1112 for 2011-2012 cycle).
 XXZZ is the full range of combined surveys (e.g. 1118 for 2011-2018 surveys pooled). 
 [A] denotes the alpha code attached to each survey cycle: G=2011-2012, H=2013-2014, I=2015-2016, J=2017-2018.
 	
-	 *Input files: 	DEMO_[A].sas7bdat
+	 * Input files: 	DEMO_[A].sas7bdat
 			FPED_DRAVGXXYY.sas7bdat
 			DR1TOT_[A].sas7bdat
-	*Output files:	tert_nhanesXXZZ.sas7bdat
+	* Output files:	tert_nhanesXXZZ.sas7bdat
 
 
 ## STEP 4 - Calculate HEI2015 scores for all participants
