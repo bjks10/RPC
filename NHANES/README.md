@@ -26,30 +26,24 @@ Run fped_CreateTerts.sas to combine survey cycles to a pooled dataset, drop "tot
 XXYY denote a single survey cycle (e.g. 1112 for 2011-2012 cycle). 
 XXZZ is the full range of combined surveys (e.g. 1118 for 2011-2018 surveys pooled). 
 [A] denotes the alpha code attached to each survey cycle: G=2011-2012, H=2013-2014, I=2015-2016, J=2017-2018.
-
 	* Input files: 	DEMO_[A].sas7bdat
-				          FPED_DRAVGXXYY.sas7bdat
-				          DR1TOT_[A].sas7bdat
-
+			FPED_DRAVGXXYY.sas7bdat
+			DR1TOT_[A].sas7bdat
 	* Output files:	tert_nhanesXXZZ.sas7bdat
 
 
 ## STEP 4 - Calculate HEI2015 scores for all participants
 Import SAS data files into SAS and run GenerateHEI.sas to calculate HEI2015 score for each survey cycle [X].
-	
   	* Input files:	DEMO_X.sas7bdat
 			FPED_DR1TOT_X.sas7bdat
 			FPED_DR2TOT_X.sas7bdat
 			hei2015_score_macro.sas
-
 	* Output files:	HEIXXYY_avg.sas7bdat
 
 ## STEP 5 - Merge HEIscores to FPED tertile data
 Import sas7bdat files into SAS and run Merge_FPEDHEI.sas to merge FPED-tertiles and HEI2015 score and demographic data to single dataset and export to CSV file
-	
   	* Input files:	HEIXXYY_avg.sas7bdat
 			tert_nhanesXXZZ.sas7bdat
-
 	* Output files: hei_tert1118.sas7bdat
 			adultHEI_fped1118terts.csv
 
