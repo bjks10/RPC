@@ -45,7 +45,7 @@ Run GenerateHEI.sas - calculate HEI2015 score for each survey cycle [X].
 	* Output files:	HEIXXYY_avg.sas7bdat
 
 ## STEP 5 - Merge HEIscores to FPED tertile data
-Run MergeFPED_HEI.sas - Merge FPED-tertiles and HEI2015 score and demographic data to single dataset and export to CSV file
+Run Merge_FPEDHEI.sas - Merge FPED-tertiles and HEI2015 score and demographic data to single dataset and export to CSV file
 	
   	* Input files:	HEIXXYY_avg.sas7bdat
 			tert_nhanesXXZZ.sas7bdat
