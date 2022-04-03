@@ -22,7 +22,7 @@ Note: The ordering of food group variables changed in 2017-2018 (J) cycle
 
 
 ## STEP 3 - Create Tertiles of Consumption
-Run fped_CreateTerts.sas - Combine survey cycles to a pooled dataset, drop "total" food labels, add diet weights. 
+Run fped_CreateTerts.sas to combine survey cycles to a pooled dataset, drop "total" food labels, add diet weights. 
 XXYY denote a single survey cycle (e.g. 1112 for 2011-2012 cycle). 
 XXZZ is the full range of combined surveys (e.g. 1118 for 2011-2018 surveys pooled). 
 [A] denotes the alpha code attached to each survey cycle: G=2011-2012, H=2013-2014, I=2015-2016, J=2017-2018.
@@ -35,7 +35,7 @@ XXZZ is the full range of combined surveys (e.g. 1118 for 2011-2018 surveys pool
 
 
 ## STEP 4 - Calculate HEI2015 scores for all participants
-Run GenerateHEI.sas - calculate HEI2015 score for each survey cycle [X].
+Import SAS data files into SAS and run GenerateHEI.sas to calculate HEI2015 score for each survey cycle [X].
 	
   	* Input files:	DEMO_X.sas7bdat
 			FPED_DR1TOT_X.sas7bdat
@@ -45,7 +45,7 @@ Run GenerateHEI.sas - calculate HEI2015 score for each survey cycle [X].
 	* Output files:	HEIXXYY_avg.sas7bdat
 
 ## STEP 5 - Merge HEIscores to FPED tertile data
-Run Merge_FPEDHEI.sas - Merge FPED-tertiles and HEI2015 score and demographic data to single dataset and export to CSV file
+Import sas7bdat files into SAS and run Merge_FPEDHEI.sas to merge FPED-tertiles and HEI2015 score and demographic data to single dataset and export to CSV file
 	
   	* Input files:	HEIXXYY_avg.sas7bdat
 			tert_nhanesXXZZ.sas7bdat
@@ -53,12 +53,14 @@ Run Merge_FPEDHEI.sas - Merge FPED-tertiles and HEI2015 score and demographic da
 	* Output files: hei_tert1118.sas7bdat
 			adultHEI_fped1118terts.csv
 
-## STEP 6 - Create_LowFdata.sas - Subset population to female adult participants living at or below the 130% poverty income level  
+## STEP 6 - Generate target study population (Low-income adult women)
+Import sas7bdat file into SAS and run Create_LowFdata.sas to subset population to female adult participants living at or below the 130% poverty income level.
 	* Input files:	hei_tert1118.sas7bdat
 	* Output files:	nhanes1118_lowFdietdata.sas7bdat
 			nhanes_lowFadultdata1Dec2021.csv
 
-## STEP 7 - RPC_nhanesLOWF.m - Run robust profile clustering on female adults at or below 130% poverty level.
+## STEP 7 - Run Robust Profile Clustering (RPC) model
+Import CSV file into MATLAB and run RPC_nhanesLOWF.m for global and local diet patterns of low-income adult women, where local patterns are specific to a participant's racial/ethnic background. 
 	* Input files:		nhanes_lowFadultdata1Dec2021.csv
 	* Output files:		RPCnhanesLOWF_MCMCmed.mat
 				NHANESLowFrpc_assign1Dec2021.csv
@@ -69,7 +71,8 @@ Run Merge_FPEDHEI.sas - Merge FPED-tertiles and HEI2015 score and demographic da
 				nu_lowwomen.fig
 
 ## STEP 8 - nhanesRPC_tables.R
+Import saved output files into R. 
 	* Input files:		NHANESLowFrpc_assign1Dec2021.csv
-				nhanesadult_cvdriskHEIFHR1118.RData
+				nhanesadult_cvdriskHEIFHR1118.RData - created in nhanes_adultCVDHEI.R
 				nhanes_lowFadultdata1Dec2021.csv 
 	* Output files: 	NHANESLowF_indata_rpc1Dec2021.csv
