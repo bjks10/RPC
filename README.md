@@ -28,6 +28,11 @@ Execution of the RPC_example.m file with Example dataset should generate the fol
 * Heat map comparison side-by-side plots of predicted deviations by subpopulation and actual deviations by subpopulation. (G_deviations.png)
 These results are stored in /Output for reference. 
 
+## Application to Nutritional Cohort Studies
+Supporting files and data are provided to apply the RPC method to two national cohorts.  
+
+  1. [National Health and Nutrition Examination Survey](https://github.com/bjks10/RPC/tree/master/NHANES) - RPC was applied here to examine racial/ethnic heterogeneity amongst low-income adult women
+  2. [Hispanic Community Health Study/Study of Latinos](https://github.com/bjks10/RPC/tree/master/HCHS_SOL) - RPC was applied here to examine geographic and ethnic heterogeneity amongst US Hispanic/Latino residents
 ## Authors
 **Briana Stephenson**, Amy Herring, Andrew Olshan
 
