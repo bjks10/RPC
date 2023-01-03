@@ -24,7 +24,7 @@ Note: The ordering of food group variables changed in 2017-2018 (J) cycle
 
 
 ## STEP 3 - Create Tertiles of Consumption
-Run fped_CreateTerts.sas to combine survey cycles to a pooled dataset, drop "total" food labels, add diet weights. 
+Run fped_CreateTerts.sas to combine survey cycles to a pooled dataset, drop "total" food labels, add diet weights. The file fped_CreateTerts_lowF.sas creates tertiles based on only those female adults living at or below 130% poverty/income level. 
 XXYY denote a single survey cycle (e.g. 1112 for 2011-2012 cycle). 
 XXZZ is the full range of combined surveys (e.g. 1118 for 2011-2018 surveys pooled). 
 [A] denotes the alpha code attached to each survey cycle: G=2011-2012, H=2013-2014, I=2015-2016, J=2017-2018.
