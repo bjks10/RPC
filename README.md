@@ -1,6 +1,8 @@
 # RPC
 The Robust Profile Clustering (RPC) model is a population-based clustering technique that adjusts for differences that may exist within different subpopulations. Here, participants are clustered at two levels: (1) globally, where subjects are assignd to an overall population-level cluster using an overfitted mixture model, and (2) locally, where variations to global patterns are accommodated via a Beta-Bernoulli process dependent on subpopulation differences.
 
+**Citation:** Stephenson BJK, Herring AH, Olshan A. Robust Clustering with Subpopulation-specific Deviations. J Am Stat Assoc. 2020;115(530):521-537. doi: 10.1080/01621459.2019.1611583. 
+
 ## Getting Started
 The code and supporting materials are run using MATLAB software. To run the example data, you will need:
 * SourceCode/RPC_example.m - run RPC and create output data 
